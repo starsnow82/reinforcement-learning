@@ -11,6 +11,7 @@
 ### Summary
 
 - Dynamic Programming (DP) methods assume that we have a perfect model of the environment's Markov Decision Process (MDP). That's usually not the case in practice, but it's important to study DP anyway.
+- DP假设有环境的“完美模型”，实际上，通常无法拿到环境的完美模型，且DP的运算量很大，并不实用。对于理论学习很重要，RL的其他算法几乎均是基于DP，但不使用完美模型或运算量较小的改进。
 - Policy Evaluation: Calculates the state-value function `V(s)` for a given policy. In DP this is done using a "full backup". At each state, we look ahead one step at each possible action and next state. We can only do this because we have a perfect model of the environment.
 - Full backups are basically the Bellman equations turned into updates.
 - Policy Improvement: Given the correct state-value function for a policy we can act greedily with respect to it (i.e. pick the best action at each state). Then we are guaranteed to improve the policy or keep it fixed if it's already optimal.
